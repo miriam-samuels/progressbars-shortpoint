@@ -1,0 +1,91 @@
+.body {
+    background-color: #fafafa;
+}
+
+.progress-bars {
+    width: 80%;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 19px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background-color: #ebebeb;
+}
+
+.progress {
+    box-sizing: content-box;
+    position: relative;
+    width: 50%;
+    height: 19px;
+    border-radius: 20px;
+    background-color: green;
+    /* opacity: 95%; */
+    animation: smooth 1s ease;
+    animation-play-state: paused;
+
+}
+
+.progress span {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translate(1%, -50%);
+    color: #5a5a5a;
+    margin-right: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.green {
+    background: repeating-linear-gradient(-45deg, #a9dd60, #a9dd60 2.5px, #8dc647af 2.5px, #8dc647af 5px);
+    box-shadow: inset 0 1px 2px #8fa767, inset 0 -1.2px 4px rgba(0, 0, 0, 0.212);
+}
+
+.red {
+    background: repeating-linear-gradient(-45deg, #fe8a7a, #fe8a7a 2.5px, #f7725faf 2.5px, #f7725faf 5px);
+    box-shadow: inset 0 1px 2px #b67971, inset 0 -1.2px 4px rgba(0, 0, 0, 0.212);
+}
+
+.white {
+    background: repeating-linear-gradient(-45deg, #fefefe, #fefefe 2.5px, #fafafaaf 2.5px, #fafafaaf 5px);
+    box-shadow: inset 0 1px 2px #dddddd, inset 0 -1.2px 4px rgba(0, 0, 0, 0.212);
+}
+
+.blue {
+    background: repeating-linear-gradient(-45deg, #86c8f1, #86c8f1 2.5px, #69b0ddaf 2.5px, #69b0ddaf 5px);
+    box-shadow: inset 0 1px 2px #5695bc, inset 0 -1.2px 4px rgba(0, 0, 0, 0.212);
+}
+
+.yellow {
+    background: repeating-linear-gradient(-45deg, #fdd05e, #fdd05e 2.5px, #fcc44baf 2.5px, #fcc44baf 5px);
+    box-shadow: inset 0 1px 2px #b89750, inset 0 -1.2px 4px rgba(0, 0, 0, 0.212);
+}
+
+.finish-button button {
+    margin-top: 2em;
+    width: 150px;
+    padding: 0.8em;
+    background-color: #abdc66;
+    box-shadow: 1px 1px 2px 1px #8fa767;
+    border: none;
+}
+
+@keyframes smooth {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

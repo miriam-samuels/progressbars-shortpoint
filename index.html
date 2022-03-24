@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="progress-bars">
+            <div class="progress-bar">
+                <div class="progress green">
+                    <span class="progress-percent">
+                        50%
+                    </span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress red">
+                    <span class="progress-percent">
+                        50%
+                    </span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress white">
+                    <span class="progress-percent">
+                        50%
+                    </span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress blue">
+                    <span class="progress-percent">
+                        50%
+                    </span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress yellow">
+                    <span class="progress-percent">
+                        50%
+                    </span>
+                </div>
+            </div>
+            <div class="finish-button">
+                <button type="button" class="finish-btn" onclick="completeProgress()">Finish</button>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        // completes the progress bar to 100%
+        const completeProgress = () => {
+            //gets all progres bars
+            const progressBars = document.getElementsByClassName('progress');
+            //gets all progres bars percent value
+            const progressMeasure = document.getElementsByClassName('progress-percent');
+            //convrts set of elements to array to allow mapping
+            const progressArray = Array.from(progressBars)
+            const measureArray = Array.from(progressMeasure)
+
+            const completeBar = progressArray.map((elem) => {
+                elem.style.webkitAnimationPlayState = "running";
+                elem.style.width = '100%';
+            })
+
+            const percentMeasure = measureArray.map((elem) => {
+                elem.innerHTML = '100%'
+            })
+        }
+    </script>
+</body>
+
+</html>
